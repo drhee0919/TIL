@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action ="/signup">
+        <label for="text">TEXT</label>
+        <input type = "text" id="text"><br> <!--input id와 label for를 연동  -->
+        <label for="number">NUMBER</label>
+        <input type = "number" id="number">
+
+        PASSWORD: <input type="password"><br> <!--입력내용이 보이지 않게 처리-->
+        EMAIL: <input type="email"><br> <!--입력 내용이 email 양식을 따름(@가 들어가야 함)-->
+        DATE: <input type="date"><br><!--날짜 상자(달략)가 입력됨 -->
+
+        <!-- Radio : 단일 선택(하나 누르면 다른 버튼은 튀어나오는 라디오처럼) -->
+        <!-- 타입과 이름이 같은 것 끼리는 value부여(구분되어 넘어갈 수 있도록)  -->
+        <input type="radio" name="gender" value="1"> 남자 <br>  <!--채크 버튼 생김 -->
+        <input type="radio" name="gender" value="2"> 여자 <br>
+        <input type="radio" name="gender" value="3"> 짐승
+
+        <!-- Checkbox : 다중 선택 -->
+        <input type="checkbox" name="option" value="1">Python <!-- 네모난 채크 박스 생김 -->
+        <input type="checkbox" name="option" value="2">HTML
+
+        <!-- Select-->
+        <select name = "country">
+            <option value="1">한국</option>
+            <option value="2">미국</option>
+            <option value="3">중국</option>
+        </select>
+
+
+        <br>
+        <input type ="submit" value="제출할래용">
+    </form>
+</body>
+</html>

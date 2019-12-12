@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        서브웨이 주문서
+    </title>
+</head>
+<body>
+    <h1><b>Form</b></h1><br>
+    <h3>주문서를 작성하여 주십시오</h2>
+    <form action ="/signup">
+        이름: <input type="text" placeholder="이름을입력해주세요."><br> 
+        날짜: <input type="date"><br>
+
+    <h2><b>1. 샌드위치 선택</b></h2><br>
+        
+        <input type="radio" name="sandwich" value="1" checked> 에그마요 <br>  <!--default 채크 -->
+        <input type="radio" name="sandwich" value="2"> 이탈리안 비엠티 <br>
+        <input type="radio" name="sandwich" value="3"> 터키 베이컨 아보카도 
+       
+<hr>
+
+    <h2><b>2. 사이즈 선택</b></h2><br>
+        <input type ="number" min="15" max="30" step="15"> <!--범위 선택지를 이지선다로 막아버림 -->
+     
+<hr>    
+
+    <h2><b>3. 빵</b></h2><br>
+        
+        <select name="select">
+            <option value="1">허니오토</option>
+            <option value="2" disabled>플렛브레드</option> <!-- 선택을 막아버릴수도 있다 -->
+            <option value="3">하티 이탈리안</option>
+        </select>
+<hr>
+    
+    
+    <h2><b>4. 야채 소스 </b></h2><br>
+       
+    <input type= "checkbox" name="source" value="">토마토<br>    
+    <input type= "checkbox" name="source" value="">오이<br>
+    <input type= "checkbox" name="source" value="">할라피뇨<br>
+    <input type= "checkbox" name="source" value="">핫칠리<br>
+    <input type= "checkbox" name="source" value="">바베큐<br>
+    <br>
+    <input type ="submit" value="submit">
+    </form>
+</body>
+</html>

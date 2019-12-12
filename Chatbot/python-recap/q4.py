@@ -23,3 +23,9 @@ elif d < 80:
     print("불합격 입니다")
 else:
     print("축하합니다 합격입니다.")
+
+#또는 
+# if a>= 90 and b>80  .....
+#     print(합격)
+# else:
+#     print(불합격)    

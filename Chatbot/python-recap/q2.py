@@ -5,7 +5,11 @@
 
 numbers = int(input('숫자를 입력하세요: '))
 
-i = 1
+i = 0
 while i <= numbers:
     i = i+1 
     print(i)
+
+#아래는 답안코드 
+# for i in range(numbers):
+#    print(i+1)

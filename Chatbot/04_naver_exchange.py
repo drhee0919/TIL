@@ -16,6 +16,7 @@ print(type(soup))  #<class 'bs4.BeautifulSoup'>
 
 # 3. 원하는 선택자 내용 가져오기
 exchange_rate =  soup.select_one('#exchangeList > li.on > a.head.usd > div > span.value').text
+    #구조를 보고 id값으로 받을지 구문 전체를 받아올지 결정한다 
 
 
 # 4. 결과물 출력 

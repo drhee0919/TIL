@@ -12,7 +12,18 @@ names = soup.select('#PM_ID_ct > div.header > div.section_navbar > div.area_hotk
 
 print(names)
 
-#태그들을 제거해보자 
+#태그들을 제거해보자
 print(f'{datetime.now()} 기준 실시간 검색어') #fstring 기능 사용(3.6버전 이상부터)
 for name in names:
     print(name.text)
+
+
+## 파이썬 3.0 이상 → format함수를 이용한 포매팅
+## 파이썬 3.6 이상 → f-string 포매팅
+
+# format 함수 
+#'{1} {0}'.format('one','two')
+
+# f-string
+# a, b = 'one', 'two'
+# f'{a}, {b}'

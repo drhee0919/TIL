@@ -9,3 +9,15 @@ prices = input('물품 가격을 입력하세요: ')
 
 price_ls = prices.split(";")
 print(sorted(price_ls, reverse=True))
+
+#또는
+# make = prices.split(';')
+# boxes = []
+# for make in makes:
+#     boxes.append(int(make))
+# boxes.sort(reverse=True)
+# for box in boxes:
+#     print(box)
+
+## sort와 sorted의 차이 
+## : sort는 원본이 바뀌나 sorted는 원본이 바뀌진 않고 결과만 보여준다. 
