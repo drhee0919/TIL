@@ -87,8 +87,43 @@ def google():
     return render_template('google.html') 
 
 
+
+
+
+## vonvon 앱을 만들어보자!
+## 사용자로부터 입력받을 페이지를 렌더링 해줌 
+@app.route('/vonvon')
+def vonvon():
+    return render_template('vonvon.html')
+
+##요청을 받은 뒤 데이터를 가공해서 사용자에게 응답해줌
+@app.route('/godmademe')
+def godmademe():
+    name = request.args.get('name')
+
+    #데이터 리스트 풀 생성
+    first_options = ['잘생김','못생김','존잘','존못','쏘쏘']
+    second_options = ['친절함','싹수','애교','잘난척']
+    third_options = ['돈복','코딩력','물욕','식욕']
+    
+    sentence1 = ['을 한스푼', '을 두스푼']
+    sentence2 = ['도 한컵','은 조금만']
+    sentence3 = ['도 조금... 억ㅋ.. 쏟았네..', '는 조금만 으어어어어어', '는 필요없겠다']
+    #각 데이터 리스트 별로 요소를 하나씩 무작위로 뽑음 
+    first = random.choice(first_options)
+    second = random.choice(second_options)
+    third = random.choice(third_options)
+    
+    s1 = random.choice(sentence1)
+    s2 = random.choice(sentence2)
+    s3 = random.choice(sentence3)
+    # 뽑은 데이터를 템플릿에 넘겨줌
+     
+    return render_template('godmademe.html', name=name, first=first, second=second, third=third,
+                                             s1=s1, s2=s2, s3=s3  )
+
 #app.py 가장 하단에 위치 시킬 것 
-# 앞으로 flask run 으로 서버를 켜는게 아니라, pyton app.py로 서버를 실행한다. 
+# 앞으로 flask run 으로 서버를 켜는게 아니라, python app.py로 서버를 실행한다. 
 # 앞으로 내용이 바뀌어도 서버를 껐다 켜지 않아도 된다. 
 
 if __name__=='__main__':
